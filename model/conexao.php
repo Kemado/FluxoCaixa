@@ -9,7 +9,7 @@
 			$hostname = 'localhost';
 			$username = 'root';
 			$password = '';
-			$nomedb   = 'bd_fluxo_caixa';
+			$nomedb   = 'bd_caixa';
 			try{
 				self::$conexao = new PDO("mysql:host=$hostname;dbname=$nomedb", $username, $password);
 				self::$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
