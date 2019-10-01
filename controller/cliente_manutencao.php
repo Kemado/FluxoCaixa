@@ -19,9 +19,12 @@ if(isset($_POST['acao']) && $_POST['acao'] == 'inserir')
 	$cliente->setDataModificacao($data_cadastro);
 	$cliente->setAtivo(1);//Já cadastra como um cliente em atividade
 	$auxmodelcliente->insert($cliente);
+	
 	//aqui
-	//as variaveis que eu criar aqui estão disponíveis no arquivo html?
+	//as variaveis que eu criar aqui estão disponíveis na view html?
+	//senão, pensar em como enviar variáveis via POST.
 	retornaHTML('../view/buscar_cli.php');
+	retornaJSON(['msg'=>'Criado com sucesso']);
 }else if(isset($_POST['acao']) && $_POST['acao'] == 'atualizar'){
 	$data_modificacao = date("Y-m-d");
 
