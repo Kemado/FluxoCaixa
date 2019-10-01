@@ -1,7 +1,7 @@
 <?php
-function retornaHTML($conteudo){
+function retornaHTML($uri){
     include_once('../view/header.php');
-    include_once($conteudo);
+    include_once($uri);
     include_once('../view/footer.php');
 }
 
